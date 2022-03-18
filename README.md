@@ -163,3 +163,6 @@ You can change the PUSHS_PATH to get to the relative path of your push_swap
 You can pause, decrease or increase the speed, or reset at will.
 
 ![pushswap](https://media.giphy.com/media/IY71kD8nAnoq14t6CU/giphy.gif)
+
+## Links
+- [Subject] (https://github.com/MateyN/so_long/blob/master/so_long/en.subject.pdf)
