@@ -6,7 +6,7 @@
 /*   By: mnikolov <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 15:12:24 by mnikolov          #+#    #+#             */
-/*   Updated: 2022/03/18 15:47:21 by mnikolov         ###   ########.fr       */
+/*   Updated: 2022/03/18 18:01:22 by mnikolov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,19 +32,19 @@ void	radix_sort(t_stack *stack, int max_bits, int max_size)
 			else
 				push_b(stack);
 		}
-		while (*stack->size_B)
+		while (*stack->size_b)
 			push_a(stack);
 	}
-	if (stack->stack_a[0] > stack->stack_a[*stack->size_A - 1])
+	if (stack->stack_a[0] > stack->stack_a[*stack->size_a - 1])
 		rotate_a(stack, 1);
 }
 
 void	sort_three(t_stack *stack)
 {
-	if (stack->stack_a[0] > stack->stack_a[*stack->size_A / 2])
+	if (stack->stack_a[0] > stack->stack_a[*stack->size_a / 2])
 		swap_a(stack, 1);
 	if (!check_order(stack)
-		&& stack->stack_a[1] > stack->stack_a[*stack->size_A])
+		&& stack->stack_a[1] > stack->stack_a[*stack->size_a])
 	{
 		reverse_rotate_a(stack, 1);
 		if (stack->stack_a[0] > stack->stack_a[1])
@@ -58,11 +58,11 @@ void	sort_five(t_stack *stack)
 		push_b(stack);
 	else
 		rotate_a(stack, 1);
-	if (*stack->size_A == 3)
+	if (*stack->size_a == 3)
 		sort_three(stack);
 	else
 		sort_five(stack);
-	while (*stack->size_B)
+	while (*stack->size_b)
 		push_a(stack);
 	if (stack->stack_a[0] > stack->stack_a[1])
 		swap_a(stack, 1);

@@ -6,13 +6,13 @@
 /*   By: mnikolov <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 15:12:14 by mnikolov          #+#    #+#             */
-/*   Updated: 2022/03/18 15:43:33 by mnikolov         ###   ########.fr       */
+/*   Updated: 2022/03/18 18:00:49 by mnikolov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-bool	check_arguments(char *args)
+int	check_arguments(char *args)
 {
 	int	i;
 
@@ -32,7 +32,7 @@ bool	check_arguments(char *args)
 	return (1);
 }
 
-bool	check_duplicate(int *stack, int stack_size)
+int	check_duplicate(int *stack, int stack_size)
 {
 	int	i;
 	int	j;
@@ -56,12 +56,12 @@ bool	check_duplicate(int *stack, int stack_size)
 	return (1);
 }
 
-bool	check_order(t_stack *stack)
+int	check_order(t_stack *stack)
 {
 	int	i;
 
 	i = 0;
-	while (i < (*stack->size_A - 1))
+	while (i < (*stack->size_a - 1))
 	{
 		if (stack->stack_a[i] > stack->stack_a[i + 1])
 			return (0);
@@ -70,12 +70,12 @@ bool	check_order(t_stack *stack)
 	return (1);
 }
 
-bool	check_min_max_int(long int arg, t_stack *stack)
+int	check_min_max_int(int args, t_stack *stack)
 {
 	int	i;
 
 	i = 0;
-	if (arg > INT_MAX || arg < INT_MIN)
+	if (args > INT_MAX || args < INT_MIN)
 	{
 		free_stacks(stack);
 		ft_putendl_fd("Error", 1);

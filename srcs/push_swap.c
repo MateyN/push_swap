@@ -6,7 +6,7 @@
 /*   By: mnikolov <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 15:12:09 by mnikolov          #+#    #+#             */
-/*   Updated: 2022/03/18 15:46:25 by mnikolov         ###   ########.fr       */
+/*   Updated: 2022/03/18 18:01:12 by mnikolov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,29 @@
 
 void	push_swap(t_stack *stack)
 {
-	check_duplicate(stack->stack_a, *stack->size_A);
+	check_duplicate(stack->stack_a, *stack->size_a);
 	if (check_order(stack))
-		display_sorting(stack, DISPLAY_STATUS, 0);
+		output_sorting(stack, 0, 0);
 	else
 	{
-		display_sorting(stack, DISPLAY_STATUS, 0);
-		if (*stack->size_A <= 3)
+		output_sorting(stack, 0, 0);
+		if (*stack->size_a <= 3)
 			sort_three(stack);
-		else if (*stack->size_A <= 5)
+		else if (*stack->size_a <= 5)
 			sort_five(stack);
-		else if (*stack->size_A > 5)
-			radix_sort(stack, 0, *stack->size_A);
-		if (check_order(stack) && *stack->size_B == 0)
-			display_sorting(stack, DISPLAY_STATUS, 2);
+		else if (*stack->size_a > 5)
+			radix_sort(stack, 0, *stack->size_a);
+		if (check_order(stack) && *stack->size_b == 0)
+			output_sorting(stack, 0, 2);
 		else
-			display_sorting(stack, DISPLAY_STATUS, 1);
+			output_sorting(stack, 0, 1);
 	}
 }
 
 int	main(int argc, char **argv)
 {
 	t_stack	*stack;
-	int			count;
+	int		count;
 
 	count = 0;
 	if (argc <= 1)
@@ -49,8 +49,8 @@ int	main(int argc, char **argv)
 		stack->a = check_if_one_arg(stack, argv[argc - 1]);
 	else if (argc >= 3)
 		stack->a = check_if_more_arg(stack, argc, argv);
-	stack->size_A = &stack->a;
-	stack->size_B = &stack->b;
+	stack->size_a = &stack->a;
+	stack->size_b = &stack->b;
 	stack->pivot = &count;
 	push_swap(stack);
 	free_stacks(stack);
