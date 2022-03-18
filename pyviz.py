@@ -29,7 +29,7 @@ class PsGui:
         else:
             self.prespeed = 0
         self.master = master
-        master.title("Push_swap viewer")
+        master.title("Push_swap visualizer")
         self.mainframe = Frame(master)
         self.mainframe.pack(fill=BOTH)
         self.can = Canvas(self.mainframe, width=ww, height=wh, bg="black")
