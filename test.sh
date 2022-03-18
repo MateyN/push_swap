@@ -123,4 +123,3 @@ ARG="5 4 1 3 2"; ./push_swap $ARG | ./checker_Mac $ARG && ./push_swap $ARG | wc 
 ARG="5 4 2 1 3"; ./push_swap $ARG | ./checker_Mac $ARG && ./push_swap $ARG | wc -l
 ARG="5 4 2 3 1"; ./push_swap $ARG | ./checker_Mac $ARG && ./push_swap $ARG | wc -l
 ARG="5 4 3 1 2"; ./push_swap $ARG | ./checker_Mac $ARG && ./push_swap $ARG | wc -l
-ARG="5 4 3 2 1"; ./push_swap $ARG | ./checker_Mac $ARG && ./push_swap $ARG | wc -l
