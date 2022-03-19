@@ -6,15 +6,12 @@
 /*   By: mnikolov <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 12:51:51 by mnikolov          #+#    #+#             */
-/*   Updated: 2022/03/18 17:55:14 by mnikolov         ###   ########.fr       */
+/*   Updated: 2022/03/19 11:57:58 by mnikolov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-
-# define INT_MAX 2147483647
-# define INT_MIN -2147483648
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -82,6 +79,6 @@ void	radix_sort(t_stack *stack, int max_bits, int max_size);
 int		check_arguments(char *arg);
 int		check_duplicate(int *stack, int stack_size);
 int		check_order(t_stack *stack);
-int		check_min_max_int(int arg, t_stack *stack);
+int		check_min_max_int(int args, t_stack *stack);
 
 #endif

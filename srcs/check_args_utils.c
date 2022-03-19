@@ -6,7 +6,7 @@
 /*   By: mnikolov <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 15:12:14 by mnikolov          #+#    #+#             */
-/*   Updated: 2022/03/18 18:00:49 by mnikolov         ###   ########.fr       */
+/*   Updated: 2022/03/19 12:00:03 by mnikolov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ int	check_arguments(char *args)
 	i = -1;
 	while (args[++i])
 	{
-		if (((args[i] == 45 && ft_isdigit(args[i + 1])) || args[i] == 32
-				|| ft_isdigit(args[i])))
+		if (((args[i] == 45 && ft_isdigit(args[i + 1]))
+				|| args[i] == 32 || ft_isdigit(args[i])))
 			continue ;
 		else
 		{
-			ft_putendl_fd("Error\n", 1);
+			ft_putendl_fd("Error", 1);
 			exit(EXIT_FAILURE);
 			return (0);
 		}
@@ -75,7 +75,7 @@ int	check_min_max_int(int args, t_stack *stack)
 	int	i;
 
 	i = 0;
-	if (args > INT_MAX || args < INT_MIN)
+	if (args > 2147483647 || args < -2147483648)
 	{
 		free_stacks(stack);
 		ft_putendl_fd("Error", 1);
