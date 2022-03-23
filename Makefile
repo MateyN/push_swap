@@ -7,9 +7,9 @@ RM		=	rm -rf
 
 FOLDER	=	srcs/
 
-FILES	=	check_args.c \
+FILES	=	checker.c \
 			output.c \
-			check_args_utils.c \
+			checker_utils.c \
 			push_swap.c \
 			ops_utils.c \
 			push.c \

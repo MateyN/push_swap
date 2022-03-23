@@ -6,7 +6,7 @@
 /*   By: mnikolov <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 12:51:51 by mnikolov          #+#    #+#             */
-/*   Updated: 2022/03/19 11:57:58 by mnikolov         ###   ########.fr       */
+/*   Updated: 2022/03/23 20:00:27 by mnikolov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ typedef struct s_stack
 /*-------- OUTPUT --------*/
 void	output_a(t_stack *stack);
 void	output_b(t_stack *stack);
-void	output_pivot(t_stack *stack);
 void	output_sorting(t_stack *stack, int output, int msg);
 
 /*-------- FREE --------*/
@@ -79,6 +78,6 @@ void	radix_sort(t_stack *stack, int max_bits, int max_size);
 int		check_arguments(char *arg);
 int		check_duplicate(int *stack, int stack_size);
 int		check_order(t_stack *stack);
-int		check_min_max_int(int args, t_stack *stack);
+int		check_min_max_int(long int args, t_stack *stack);
 
 #endif
