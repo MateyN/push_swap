@@ -6,7 +6,7 @@
 /*   By: mnikolov <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 15:12:09 by mnikolov          #+#    #+#             */
-/*   Updated: 2022/03/23 19:50:32 by mnikolov         ###   ########.fr       */
+/*   Updated: 2022/03/23 20:14:20 by mnikolov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ void	push_swap(t_stack *stack)
 		else if (*stack->size_a > 5)
 			radix_sort(stack, 0, *stack->size_a);
 		if (check_order(stack) && *stack->size_b == 0)
-			output_sorting(stack, 0, 2);
+			output_sorting(stack, 0, 0);
 		else
-			output_sorting(stack, 0, 1);
+			output_sorting(stack, 0, 0);
 	}
 }
 

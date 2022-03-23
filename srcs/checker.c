@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_args_utils.c                                 :+:      :+:    :+:   */
+/*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnikolov <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 15:12:14 by mnikolov          #+#    #+#             */
-/*   Updated: 2022/03/23 19:30:42 by mnikolov         ###   ########.fr       */
+/*   Updated: 2022/03/23 20:27:52 by mnikolov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ int	check_arguments(char *args)
 	i = -1;
 	while (args[++i])
 	{
-		if (((args[i] == 45 && ft_isdigit(args[i + 1]))
-				|| args[i] == 32 || ft_isdigit(args[i])))
+		if (ft_isdigit(args[i + 1]) || ft_isdigit(args[i]))
 			continue ;
 		else
 		{
