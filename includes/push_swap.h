@@ -6,7 +6,7 @@
 /*   By: mnikolov <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 12:51:51 by mnikolov          #+#    #+#             */
-/*   Updated: 2022/03/23 20:22:15 by mnikolov         ###   ########.fr       */
+/*   Updated: 2022/03/24 19:02:38 by mnikolov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <limits.h>
 # include "../libft/libft.h"
 
 typedef struct s_stack

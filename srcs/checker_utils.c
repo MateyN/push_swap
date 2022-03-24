@@ -6,7 +6,7 @@
 /*   By: mnikolov <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 16:03:55 by mnikolov          #+#    #+#             */
-/*   Updated: 2022/03/23 20:04:49 by mnikolov         ###   ########.fr       */
+/*   Updated: 2022/03/24 18:58:13 by mnikolov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	check_if_one_arg(t_stack *stack, char *arguments)
 	j = -1;
 	while (++j < i)
 	{
-		check_min_max_int(ft_atoi(split[j]), stack);
+		check_min_max_int(ft_atoi_2(split[j]), stack);
 		num = ft_atoi(split[j]);
 		stack->numbers[j] = num;
 	}
@@ -81,7 +81,7 @@ int	check_if_more_arg(t_stack *stack, int count, char **arguments)
 	while (++j < i)
 	{
 		check_arguments(arguments[j + 1]);
-		check_min_max_int(ft_atoi(arguments[j + 1]), stack);
+		check_min_max_int(ft_atoi_2(arguments[j + 1]), stack);
 		num = ft_atoi(arguments[j + 1]);
 		stack->numbers[j] = num;
 	}
